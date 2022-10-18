@@ -28,4 +28,15 @@ public class Main : Node
 
         GetNode<Timer>("StartTimer").Start();
     }
+
+    public void OnScoreTimerTimeout()
+    {
+        Score++;
+    }
+
+    public void OnStartTimerTimeout()
+    {
+        GetNode<Timer>("MobTimer").Start();
+        GetNode<Timer>("ScoreTimer").Start();
+    }
 }
