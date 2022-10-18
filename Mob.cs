@@ -9,4 +9,9 @@ public class Mob : RigidBody2D
         string[] mobTypes = animSprite.Frames.GetAnimationNames();
         animSprite.Animation = mobTypes[GD.Randi() % mobTypes.Length];
     }
+
+    public void OnVisibilityNotifier2DScreenExited()
+    {
+        QueueFree();
+    }
 }
