@@ -26,6 +26,7 @@ public class Main : Node
         var player = GetNode<Player>("Player");
         var startPosition = GetNode<Position2D>("StartPosition");
 
+        GetTree().CallGroup("mobs", "queue_free");
         hud.UpdateScore(Score);
         hud.ShowMessage("Get Ready!");
         player.Start(startPosition.Position);
