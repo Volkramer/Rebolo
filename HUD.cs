@@ -36,7 +36,7 @@ public class HUD : CanvasLayer
 
     public void OnStartButtonPressed()
     {
-        GetNode<Label>("StartButton").Hide();
+        GetNode<Button>("StartButton").Hide();
         EmitSignal("StartGame");
     }
 
